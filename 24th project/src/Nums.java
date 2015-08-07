@@ -47,37 +47,40 @@ public class Nums {
 			}
 			else
 			{
-				//System.out.println(myMap.get(num));		//print value of given key
-				System.out.println("Read in list of books");
-				try
-				{
-					ArrayList<String> books = new ArrayList<String>();
-					BufferedReader reader = new BufferedReader(new FileReader(filename));
-					String line = reader.readLine();
-					
-					while(line != null)
-					{
-						books.add(line);
-						line = reader.readLine();
-					}
-					
-					for(String st: books)
-					{
-						System.out.println(st);
-					}
-				}
-				
-				catch (Exception e)
-				{
-					e.printStackTrace();
-				}
-		
-			}	
+				//System.println(myMap.get(num));
+				System.out.println(myMap.get(num));		//print value of given key
+			}
+			
 			System.out.print("Would you like to try again ? y/n ");
 		    choice = sc.next();
-		
+	
 		
 		}
+		System.out.println("Read in list of books");
+		try
+		{
+			ArrayList<String> books = new ArrayList<String>();
+			BufferedReader reader = new BufferedReader(new FileReader(filename));
+			String line = reader.readLine();
+			
+			while(line != null)
+			{
+				books.add(line);
+				line = reader.readLine();
+			}
+			
+			for(String st: books)
+			{
+				System.out.println(st);
+			}
+		}
+		
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		
 	}
 
 }
